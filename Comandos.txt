@@ -12,8 +12,26 @@ kubectl get namespaces
 
 kubectl get pods -n kube-system
 
+kubectl describe pod [nome do namespace]
+
+kubectl get pods --all-namespaces
+
+kubectl desacribe pod etcd-minekube -n kube-system
 
 
+Aplicação de código
+
+kubectl create namespace teste
+
+kubectl get pods -n teste -o wide
+
+curl <IP DO POD>
+
+kubectl run nginx --generator=run-pod/v1 --image=ngix -n teste
+
+kubectl label pod nginx-pod -n teste run=novonginx
+
+kubectl delete pods -l run=novonginx --all-namespaces
 
 
 
