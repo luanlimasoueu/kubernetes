@@ -1,3 +1,10 @@
 #Criação de Cluster
 
 minekube start 
+
+
+#Aplicar manifesto
+kubectl apply -f pod.yaml
+
+
+kubectl get pods
