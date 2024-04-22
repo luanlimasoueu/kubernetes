@@ -20,3 +20,11 @@ kubectl delete rs nginx-replicaset
 kubectl apply -f deployment.yaml 
 
 kubectl apply --validate=false -f service.yaml
+
+kubectl port-forward pod/nginx-service 8080:80
+
+kubectl delete svc nginx-service
+
+kubectl get svc
+
+kubectl port-forward svc/nginx-service 8080:80
