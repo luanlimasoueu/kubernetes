@@ -1,0 +1,3 @@
+#Criação de Cluster
+
+minekube start 
