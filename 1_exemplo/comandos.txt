@@ -18,3 +18,5 @@ kubectl port-forward pod/nginx-replicaset-h576n 8080:80
 kubectl delete rs nginx-replicaset
 
 kubectl apply -f deployment.yaml 
+
+kubectl apply --validate=false -f service.yaml
