@@ -8,3 +8,13 @@ kubectl apply -f pod.yaml
 
 
 kubectl get pods
+
+kubectl apply -f replicaset.yaml
+
+kubectl get rs 
+
+kubectl port-forward pod/nginx-replicaset-h576n 8080:80
+
+kubectl delete rs nginx-replicaset
+
+kubectl apply -f deployment.yaml 
