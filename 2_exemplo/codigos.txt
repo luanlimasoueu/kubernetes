@@ -1,3 +1,13 @@
 virtualenv venv 
 
 mkdir app
+
+uvicorn main:app --reload
+
+docker build .
+
+docker build -t 2_exemplo . 
+
+docker run -p 8081:80 2_exemplo
+
+localhost:8081
