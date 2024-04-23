@@ -11,3 +11,8 @@ docker build -t 2_exemplo .
 docker run -p 8081:80 2_exemplo
 
 localhost:8081
+
+
+docker build -t okluan/k8s-start:0.0.1 .
+
+docker push okluan/k8s-start:0.0.1 
