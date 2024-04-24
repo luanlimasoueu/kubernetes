@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: okluan-tech-python-qyotes
+  labels:
+    app: quotes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quotes
+  template:
+    metadata:
+      labels:
+        app: quotes
+    spec:
+      containers:
+      - name: quotes
+        image: okluan/python-quotes:v0.0.1
