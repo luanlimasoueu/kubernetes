@@ -1,0 +1,7 @@
+docker build -t flash-kubernetes .
+docker images
+minikube start
+kubectl apply  --validate=false -f deployment.yaml
+minikube dashboard
+minikube service flask-test-app 
+
