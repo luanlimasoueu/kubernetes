@@ -1,0 +1,9 @@
+docker build -t okluan/nginxdemo:1.0 . 
+docker push okluan/nginxdemo:1.0
+docker run -it --rm okluan/nginxdemo:1.0
+
+kubectl run demonginx --image=okluan/nginxdemo:1.0 --port=80
+
+kubectl expose pod demonginx --name=demonginxsvc --port=80
+
+kubectl port-forward service/demonginxsvc 7080:80
